@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{689F590D-AD8C-49D6-ACDF-61939BC5B710}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Blast</RootNamespace>
+    <AssemblyName>Blast</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <MonoGameContentBuilderExe>
+    </MonoGameContentBuilderExe>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Windows\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Windows\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Game1.cs" />
+    <Compile Include="Game\Assets\AssetManager.cs" />
+    <Compile Include="Game\Assets\TileSheet.cs" />
+    <Compile Include="Game\Camera.cs" />
+    <Compile Include="Game\Entity\AnimatedEntity.cs" />
+    <Compile Include="Game\Entity\EnemyManager.cs" />
+    <Compile Include="Game\Entity\Entities\Background.cs" />
+    <Compile Include="Game\Entity\Entities\Bullet.cs" />
+    <Compile Include="Game\Entity\Entities\FighterEnemy.cs" />
+    <Compile Include="Game\Entity\Entities\FollowEnemy.cs" />
+    <Compile Include="Game\Entity\Entities\Health.cs" />
+    <Compile Include="Game\Entity\Entities\HealthPickup.cs" />
+    <Compile Include="Game\Entity\Entities\Numbers.cs" />
+    <Compile Include="Game\Entity\Entities\Player.cs" />
+    <Compile Include="Game\Entity\Entities\ShooterEnemy.cs" />
+    <Compile Include="Game\Entity\Entities\SpikeEnemy.cs" />
+    <Compile Include="Game\Entity\Entity.cs" />
+    <Compile Include="Game\Entity\GameFeelManager.cs" />
+    <Compile Include="Game\Entity\PickupManager.cs" />
+    <Compile Include="Game\Globals.cs" />
+    <Compile Include="Game\IEnemy.cs" />
+    <Compile Include="Game\Screen\DeathScreen.cs" />
+    <Compile Include="Game\Screen\GameScreen.cs" />
+    <Compile Include="Game\Screen\InputState.cs" />
+    <Compile Include="Game\Screen\MenuScreen.cs" />
+    <Compile Include="Game\Screen\Screen.cs" />
+    <Compile Include="Game\Screen\ScreenManager.cs" />
+    <Compile Include="Game\Screen\ScreenState.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MSBuildProgramFiles32)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Sounds\Explosion.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sounds\Hit.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sounds\Shoot.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\BlastMenu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\Bullet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\Door.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\EnemyBullet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\Explosion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\FighterEnemy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\FollowEnemy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\HealthPickup.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\Heart.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\Hearts.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\HiscoreScreen.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\MiniExplosion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\Numbers.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\Outline.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\ScoreMenu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\ShooterEnemy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\SpaceShip.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\SpikeEnemy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\StatBar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Sprites\Test\Explosion1.png" />
+    <Content Include="Content\Sprites\Test\Explosion2.png" />
+    <Content Include="Content\Sprites\Test\Explosion3.png" />
+    <Content Include="Content\Sprites\Test\Explosion4.png" />
+    <Content Include="Content\Sprites\Test\Explosion5.png" />
+    <Content Include="Content\Sprites\Test\Explosion6.png" />
+    <Content Include="Content\Sprites\Test\Explosion7.png" />
+    <Content Include="Content\Sprites\Test\Explosion8.png" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\song.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Content\Sprites\Background.ase" />
+    <None Include="Content\Sprites\Door.ase" />
+    <None Include="Content\Sprites\DPad.ase" />
+    <None Include="Content\Sprites\Explosion.ase" />
+    <None Include="Content\Sprites\FighterEnemy.ase" />
+    <None Include="Content\Sprites\FireButton.ase" />
+    <None Include="Content\Sprites\FollowEnemy.ase" />
+    <None Include="Content\Sprites\MeleeEnemy.ase" />
+    <None Include="Content\Sprites\SpikeEnemy.ase" />
+    <None Include="Content\Sprites\Test\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
